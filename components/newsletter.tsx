@@ -168,7 +168,7 @@ export const Newsletter = () => {
                 }}
                 className="text-base short:lg:text-lg sm:text-lg lg:text-xl !leading-[1.1] font-medium text-center text-foreground text-pretty"
               >
-                Explore our partner businesses and connect with us!
+                Explore our partner sponsors and connect with us!
               </motion.p>
             </div>
           </motion.div>
