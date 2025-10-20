@@ -25,7 +25,7 @@ const BRANDS = [
     links: [
       {
         type: "instagram",
-        url: "https://www.instagram.com/stichentime?igsh=a29zMzJjcHlyZWxoTemptations",
+        url: "https://www.instagram.com/stichentime",
       },
     ],
   },
@@ -34,7 +34,7 @@ const BRANDS = [
     links: [
       {
         type: "instagram",
-        url: "https://www.instagram.com/temptations.thebakehouse?igsh=Ymt6MDA1NzFqeG02",
+        url: "https://www.instagram.com/temptations.thebakehouse",
       },
     ],
   },
@@ -43,7 +43,7 @@ const BRANDS = [
     links: [
       {
         type: "instagram",
-        url: "https://www.instagram.com/capitalpizza.pk?igsh=MXJra3p5NHMyaWE0Zg==",
+        url: "https://www.instagram.com/capitalpizza.pk",
       },
     ],
   },
@@ -52,7 +52,7 @@ const BRANDS = [
     links: [
       {
         type: "instagram",
-        url: "https://www.instagram.com/bites.isb?igsh=MTV6Z3FsOXQxZGx4ZA==",
+        url: "https://www.instagram.com/bites.isb",
       },
       {
         type: "google",
@@ -65,7 +65,7 @@ const BRANDS = [
     links: [
       {
         type: "instagram",
-        url: "https://www.instagram.com/alfusas.pk?igsh=M2pqMng4NmIycnd5",
+        url: "https://www.instagram.com/alfusas.pk",
       },
     ],
   },
