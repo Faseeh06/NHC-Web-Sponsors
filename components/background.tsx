@@ -65,7 +65,7 @@ const VideoWithPlaceholder = ({
   }, [videoLoaded]);
 
   return (
-    <>
+    <div className="absolute bg-background left-0 top-0 w-full h-full rounded-[42px] md:rounded-[72px] overflow-hidden">
       {placeholder ? (
         <Image
           src={placeholder}
@@ -73,7 +73,7 @@ const VideoWithPlaceholder = ({
           priority
           sizes="100vw"
           alt="Background"
-          className={cn(className, "transition-opacity duration-500", { "opacity-0": videoLoaded })}
+          className={cn("w-full h-full object-cover animate-zoom transition-opacity duration-500", { "opacity-0": videoLoaded })}
           quality={100}
           fill
         />
@@ -86,9 +86,9 @@ const VideoWithPlaceholder = ({
         loop
         controls={false}
         preload="auto"
-        className={cn(className, "transition-opacity duration-500", { "opacity-0": !videoLoaded })}
+        className={cn("w-full h-full object-cover animate-zoom transition-opacity duration-500", { "opacity-0": !videoLoaded })}
       />
-    </>
+    </div>
   );
 };
 
@@ -103,7 +103,7 @@ export const Background = ({
   const isVideoFile = isVideo(extension);
 
   const classNames =
-    "absolute bg-background left-0 top-0 w-full h-full object-cover rounded-[42px] md:rounded-[72px] animate-zoom";
+    "absolute bg-background left-0 top-0 w-full h-full object-cover rounded-[42px] md:rounded-[72px]";
 
   if (isVideoFile) {
     return (
@@ -116,14 +116,16 @@ export const Background = ({
   }
 
   return (
-    <Image
-      priority
-      loading="eager"
-      src={src}
-      alt="Background"
-      className={classNames}
-      sizes="100vw"
-      fill
-    />
+    <div className="absolute bg-background left-0 top-0 w-full h-full rounded-[42px] md:rounded-[72px] overflow-hidden">
+      <Image
+        priority
+        loading="eager"
+        src={src}
+        alt="Background"
+        className="w-full h-full object-cover animate-zoom"
+        sizes="100vw"
+        fill
+      />
+    </div>
   );
 };
