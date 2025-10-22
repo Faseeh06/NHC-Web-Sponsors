@@ -116,30 +116,30 @@ export const Newsletter = () => {
             }}
           >
             <div className="flex flex-col gap-4 w-full max-w-4xl md:gap-6 lg:gap-8">
-              <div className="flex flex-wrap justify-center gap-4 md:gap-6">
+              <div className="grid grid-cols-2 gap-3 sm:gap-4 md:gap-6 lg:flex lg:flex-wrap lg:justify-center">
                 {BRANDS.map((brand) => (
                   <motion.div
                     key={brand.name}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: DURATION, ease: EASE_OUT }}
-                    className="flex flex-col gap-4 p-4 border border-border/30 rounded-2xl hover:bg-primary/5 transition-all duration-300 hover:shadow-lg hover:scale-105 bg-transparent backdrop-blur-sm w-48"
+                    className="flex flex-col gap-2 sm:gap-4 p-3 sm:p-4 border border-border/30 rounded-2xl hover:bg-primary/5 transition-all duration-300 hover:shadow-lg hover:scale-105 bg-transparent backdrop-blur-sm w-full lg:w-48"
                   >
-                    <h3 className="text-lg font-semibold text-foreground text-center mb-2">{brand.name}</h3>
-                    <div className="flex gap-3 justify-center">
+                    <h3 className="text-sm sm:text-lg font-semibold text-foreground text-center mb-1 sm:mb-2">{brand.name}</h3>
+                    <div className="flex gap-2 sm:gap-3 justify-center">
                       {brand.links.map((link) => (
                         <a
                           key={`${brand.name}-${link.type}`}
                           href={link.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className={buttonVariants({ size: "icon-xl" })}
+                          className={buttonVariants({ size: "icon" })}
                           aria-label={`${brand.name} ${link.type}`}
                         >
-                          {link.type === "instagram" && <Instagram className="size-6" />}
+                          {link.type === "instagram" && <Instagram className="size-4 sm:size-6" />}
                           {link.type === "google" && (
                             <svg
-                              className="size-6"
+                              className="size-4 sm:size-6"
                               viewBox="0 0 24 24"
                               fill="currentColor"
                               xmlns="http://www.w3.org/2000/svg"
